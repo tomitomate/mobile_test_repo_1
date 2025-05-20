@@ -1,38 +1,14 @@
-# MiniBoard
+# MiniBoard Client
 
-This folder contains a minimalist implementation of the **MiniBoard** project.
-It provides a typed Express server with Prisma ORM and shared Zod schemas for
-the core models (Board, Group, Item).
+This is a minimal React application boot-strapped with **Vite**.  
+It fetches boards from the Express API and lets you create new boards.
 
-## Structure
-- `client/` – Vite/React SPA for the frontend.
-- `server/` – Express server with Prisma setup.
-- `shared/` – shared TypeScript types and Zod schemas.
+## Available scripts
 
-The server exposes CRUD APIs for boards, groups, and items.
+| command              | purpose                      |
+| -------------------- | ---------------------------- |
+| `npm run dev`        | start the development server |
+| `npm run build`      | build for production         |
+| `npm run preview`    | preview the production build |
 
-## Running the project
-
-1. Install dependencies in both the `server` and `client` folders:
-
-   ```bash
-   cd server && npm install
-   cd ../client && npm install
-   ```
-
-2. Generate the Prisma client and start the API server:
-
-   ```bash
-   cd server
-   npx prisma migrate dev --name init
-   npm start
-   ```
-
-3. In another terminal, start the React development server:
-
-   ```bash
-   cd client
-   npm run dev
-   ```
-
-The client assumes the API is running on `http://localhost:3000`.
+_Run `npm install` once before using any of the scripts above._
